@@ -7,7 +7,7 @@ pipeline {
         ARTIFACT_NAME = "pipelines-dotnet-core.dll"
         AWS_EB_APP_NAME = "dotnet-jenkins"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Dotnetjenkins-env"
+        AWS_EB_ENVIRONMENT = "Dotnetjenkins-env-1"
     }
     stages {
         stage('Restor') {
