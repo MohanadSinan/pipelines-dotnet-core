@@ -41,7 +41,7 @@ pipeline {
          stage('Publish artifacts to S3 Bucket') {
             steps {//5. Publish the artifacts
 
-                sh "aws configure set region us-east-1"
+                sh "aws configure set region me-south-1"
                 sh "aws s3 cp ./bin/Debug/net6.0/pipelines-dotnet-core.dll s3://$AWS_S3_BUCKET/$ARTIFACT_NAME"
             }
          }
