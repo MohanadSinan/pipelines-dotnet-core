@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Restor') {
             steps {
-                sh "sudo dotnet restore"
+                sh "dotnet restore"
             }
         }
          stage('Build') {
