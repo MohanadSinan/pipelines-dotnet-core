@@ -29,7 +29,6 @@ pipeline {
 	    
         stage('Quality Scan'){
             steps {
-                sh "dotnet tool install --global dotnet-sonarscanner"
 		sh 'dotnet sonarscanner begin /k:".NET-Application" /d:sonar.host.url="http://15.185.224.95"  /d:sonar.login="sqp_b9dbf13c7993eb537853d206ca26e3b22c40ba5a"'
 		sh "dotnet build"
 		sh 'dotnet sonarscanner end /d:sonar.login="sqp_b9dbf13c7993eb537853d206ca26e3b22c40ba5a"'
